@@ -1,0 +1,19 @@
+.content-wrapper {
+  min-width: 250px;
+  min-height: 100vh;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: OpenSans-r;
+}
+:host ::ng-deep .mat-expansion-panel {
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+}
+.white {
+  color: white;
+}
