@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  constructor() {
+    (window as any).cs = {};
+  }
   title = 'code-samples';
   menuOpen = false;
   handleHamburgerClick(isOpen: boolean) {

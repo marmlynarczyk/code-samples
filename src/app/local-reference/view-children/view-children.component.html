@@ -1,0 +1,10 @@
+<h1>ViewChildren</h1>
+<div *ngFor="let fruit of fruits" #fruitRef>
+  <app-text1 [text]="fruit"></app-text1>
+</div>
+<input
+  #fruitInputRef
+  [value]="fruitInput"
+  (keyup)="onFruitInputKeyUp(fruitInputRef.value)"
+  (keyup.enter)="onAddFruitClick()"
+/><button (click)="onAddFruitClick()">DODAJ OWOC</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { links } from '../menu-links';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,26 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
-  links: {
-    title: string;
-    items: {
-      title: string;
-      items: { adress: string; description: string }[];
-    }[];
-  }[] = [
-    {
-      title: 'CSS',
-      items: [
-        { title: 'fontFace', items: [{ adress: 'test', description: 'test' }] },
-      ],
-    },
-    {
-      title: 'Reactive forms',
-      items: [
-        { title: 'title 1', items: [{ adress: 'test', description: 'test' }] },
-      ],
-    },
-  ];
+  links = links;
   constructor() {}
 
   ngOnInit(): void {}

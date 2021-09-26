@@ -10,7 +10,12 @@ import { HamburgerComponent } from './css/hamburger/hamburger.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
-  declarations: [AppComponent, Base1controlComponent, HamburgerComponent, SidenavComponent],
+  declarations: [
+    AppComponent,
+    Base1controlComponent,
+    HamburgerComponent,
+    SidenavComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

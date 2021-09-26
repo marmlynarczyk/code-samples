@@ -2,13 +2,19 @@
   <h1>CODE SAMPLES</h1>
   <mat-expansion-panel hideToggle *ngFor="let title of links">
     <mat-expansion-panel-header>
-      <mat-panel-title class="white"> {{ title.title }} </mat-panel-title>
+      <mat-panel-title class="white">
+        {{ title.chapterTitle }}
+      </mat-panel-title>
     </mat-expansion-panel-header>
-    <mat-expansion-panel hideToggle *ngFor="let link of title.items">
+    <mat-expansion-panel hideToggle *ngFor="let item of title.items">
       <mat-expansion-panel-header>
-        <mat-panel-title class="white"> {{ link.title }} </mat-panel-title>
+        <mat-panel-title class="white"> {{ item.title }} </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>This is the primary content of the panel.</p>
+      <ul>
+        <li *ngFor="let link of item.links">
+          <a [routerLink]="link.adress">{{ link.description }}</a>
+        </li>
+      </ul>
     </mat-expansion-panel>
   </mat-expansion-panel>
 </div>
